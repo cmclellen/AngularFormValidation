@@ -1,5 +1,7 @@
-import mainModule from './main';
+'use strict';
+
+import appModule from './app';
 
 angular.element(document).ready(function() {
-    angular.bootstrap(document, [mainModule.name]);
+    angular.bootstrap(document, [appModule.name]);
 });

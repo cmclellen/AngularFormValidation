@@ -6,10 +6,58 @@
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
     <script>
-        System.import('app/app').catch(console.error.bind(console));
+        System.import('app/bootstrap').catch(console.error.bind(console));
     </script>
+    <link rel="stylesheet" type="text/css" href="jspm_packages/github//twbs/bootstrap@3.3.5/css/bootstrap.min.css">
   </head>
-  <body>
-    test
+  <body ng-app="app">
+    <div class="container">
+      <form name="exampleForm" class="myForm" required>
+
+        <div class="form-group">
+          <label for="userFirstName">First Name</label>
+          <input class="form-control" type="text" id="userFirstName" name="userFirstName" ng-model="firstName" required placeholder="First Name"/>
+          <div ng-messages="exampleForm.userFirstName.$error" ng-if="exampleForm.userFirstName.$dirty">
+            <div ng-message="required">This field is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="userLastName">Last Name</label>
+          <input class="form-control" type="text" id="userLastName" name="userLastName" ng-model="lastName" required placeholder="Last Name" />
+          <div ng-messages="exampleForm.userLastName.$error" ng-if="exampleForm.userLastName.$dirty">
+            <div ng-message="required">This field is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="userEmail">Email Address</label>
+          <input class="form-control" type="email" id="userEmail" name="userEmail" ng-model="email" required placeholder="Email Address" />
+          <div ng-messages="exampleForm.userEmail.$error" ng-if="exampleForm.userEmail.$dirty">
+            <div ng-message="required">This field is required</div>
+            <div ng-message="email">Your email address is invalid</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="userPhoneNumber">Phone Number</label>
+          <input class="form-control" type="email" id="userPhoneNumber" name="userPhoneNumber" ng-model="phoneNumber" placeholder="Phone Number" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" required />
+          <div ng-messages="exampleForm.userPhoneNumber.$error" ng-if="exampleForm.userPhoneNumber.$dirty">
+            <div ng-message="required">This field is required</div>
+            <div ng-message="pattern">Must be a valid 10 digit phone number</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="userMessage">User Message</label>
+          <textarea class="form-control" type="text" id="userMessage" name="userMessage" ng-model="message" ng-minlength="100" ng-maxlength="1000" placeholder="User Message" required></textarea>
+          <div ng-messages="exampleForm.userMessage.$error" ng-if="exampleForm.userMessage.$dirty">
+            <div ng-message="required">This field is required</div>
+            <div ng-message="minlength">Message must be over 100 characters</div>
+            <div ng-message="maxlength">Message must not exceed 1000 characters</div>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

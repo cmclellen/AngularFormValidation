@@ -7,12 +7,12 @@ var path = {
 };
 
 gulp.task('html', function() {
-  sulp.src(path.html)
+  gulp.src(path.html)
     .pipe(connect.reload());
 });
 
 gulp.task('js', function() {
-  sulp.src(path.js)
+  gulp.src(path.js)
     .pipe(connect.reload());
 });
 

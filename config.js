@@ -17,12 +17,16 @@ System.config({
   "map": {
     "angular": "github:angular/bower-angular@1.4.5",
     "angular-messages": "github:angular/bower-angular-messages@1.4.5",
+    "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "babel": "npm:babel-core@5.8.23",
     "babel-runtime": "npm:babel-runtime@5.8.20",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "core-js": "npm:core-js@0.9.18",
     "gulp": "npm:gulp@3.9.0",
     "gulp-connect": "npm:gulp-connect@2.2.0",
+    "github:angular-ui/ui-router@0.2.15": {
+      "angular": "github:angular/bower-angular@1.4.5"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },

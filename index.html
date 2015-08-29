@@ -26,7 +26,7 @@
           <label for="userLastName">Last Name</label>
           <input class="form-control" type="text" id="userLastName" name="userLastName" ng-model="lastName" required placeholder="Last Name" />
           <div  class="has-error help-block" ng-messages="exampleForm.userLastName.$error" ng-if="exampleForm.userLastName.$dirty">
-            <div class="has-error help-block"  ng-message="required">This field is required</div>
+            <div class="has-error help-block" ng-message="required">This field is required</div>
           </div>
         </div>
 
@@ -34,8 +34,8 @@
           <label for="userEmail">Email Address</label>
           <input class="form-control" type="email" id="userEmail" name="userEmail" ng-model="email" required placeholder="Email Address" />
           <div class="has-error help-block" ng-messages="exampleForm.userEmail.$error" ng-if="exampleForm.userEmail.$dirty">
-            <div class="has-error help-block"  ng-message="required">This field is required</div>
-            <div class="has-error help-block"  ng-message="email">Your email address is invalid</div>
+            <div class="has-error help-block" ng-message="required">This field is required</div>
+            <div class="has-error help-block" ng-message="email">Your email address is invalid</div>
           </div>
         </div>
 
@@ -43,8 +43,16 @@
           <label for="userPhoneNumber">Phone Number</label>
           <input class="form-control" type="email" id="userPhoneNumber" name="userPhoneNumber" ng-model="phoneNumber" placeholder="Phone Number" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" required />
           <div class="has-error help-block" ng-messages="exampleForm.userPhoneNumber.$error" ng-if="exampleForm.userPhoneNumber.$dirty">
-            <div class="has-error help-block"  ng-message="required">This field is required</div>
-            <div class="has-error help-block"  ng-message="pattern">Must be a valid 10 digit phone number</div>
+            <div class="has-error help-block" ng-message="required">This field is required</div>
+            <div class="has-error help-block" ng-message="pattern">Must be a valid 10 digit phone number</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="userOddNumber">Odd Number</label>
+          <input class="form-control" type="number" id="userOddNumber" name="userOddNumber" ng-model="oddNumber" placeholder="Odd Number" min="1" required odd />
+          <div class="has-error help-block" ng-messages="exampleForm.userOddNumber.$error" ng-if="exampleForm.userOddNumber.$dirty">
+            <div class="has-error help-block" ng-message="odd">Odd numbers only!</div>            
           </div>
         </div>
 

@@ -15,7 +15,7 @@
       <form name="exampleForm" class="myForm" required>
 
         <div class="form-group" ng-class="{'has-error': exampleForm.userFirstName.$dirty && exampleForm.userFirstName.$invalid}">
-          <label for="userFirstName">First Name</label>
+          <label class="control-label" for="userFirstName">First Name</label>
           <input class="form-control" type="text" id="userFirstName" name="userFirstName" ng-model="firstName" required placeholder="First Name"/>
           <div class="help-block" ng-messages="exampleForm.userFirstName.$error" ng-if="exampleForm.userFirstName.$dirty">
             <div ng-message="required">This field is required</div>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="form-group" ng-class="{'has-error': exampleForm.userLastName.$dirty && exampleForm.userLastName.$invalid}">
-          <label for="userLastName">Last Name</label>
+          <label class="control-label" for="userLastName">Last Name</label>
           <input class="form-control" type="text" id="userLastName" name="userLastName" ng-model="lastName" required placeholder="Last Name" />
           <div class="help-block" ng-messages="exampleForm.userLastName.$error" ng-if="exampleForm.userLastName.$dirty">
             <div ng-message="required">This field is required</div>
@@ -31,7 +31,7 @@
         </div>
 
         <div class="form-group" ng-class="{'has-error': exampleForm.userEmail.$dirty && exampleForm.userEmail.$invalid}">
-          <label for="userEmail">Email Address</label>
+          <label class="control-label" for="userEmail">Email Address</label>
           <input class="form-control" type="email" id="userEmail" name="userEmail" ng-model="email" required placeholder="Email Address" />
           <div class="help-block" ng-messages="exampleForm.userEmail.$error" ng-if="exampleForm.userEmail.$dirty">
             <div ng-message="required">This field is required</div>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="form-group" ng-class="{'has-error': exampleForm.userPhoneNumber.$dirty && exampleForm.userPhoneNumber.$invalid}">
-          <label for="userPhoneNumber">Phone Number</label>
+          <label class="control-label" for="userPhoneNumber">Phone Number</label>
           <input class="form-control" type="email" id="userPhoneNumber" name="userPhoneNumber" ng-model="phoneNumber" placeholder="Phone Number" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" required />
           <div class="help-block" ng-messages="exampleForm.userPhoneNumber.$error" ng-if="exampleForm.userPhoneNumber.$dirty">
             <div ng-message="required">This field is required</div>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="form-group" ng-class="{'has-error': exampleForm.userOddNumber.$dirty && exampleForm.userOddNumber.$invalid}">
-          <label for="userOddNumber">Odd Number</label>
+          <label class="control-label" for="userOddNumber">Odd Number</label>
           <input class="form-control" type="number" id="userOddNumber" name="userOddNumber" ng-model="oddNumber" placeholder="Odd Number" min="1" required odd />
           <div class="help-block" ng-messages="exampleForm.userOddNumber.$error" ng-if="exampleForm.userOddNumber.$dirty">
             <div ng-message="odd">Odd numbers only!</div>            
@@ -57,7 +57,7 @@
         </div>
 
         <div class="form-group" ng-class="{'has-error': exampleForm.userPrimeNumber.$dirty && exampleForm.userPrimeNumber.$invalid}">
-          <label for="userPrimeNumber">Prime Number</label>
+          <label class="control-label" for="userPrimeNumber">Prime Number</label>
           <input class="form-control" type="number" id="userPrimeNumber" name="userPrimeNumber" ng-model="primeNumber" placeholder="Prime Number" min="1" required prime />
           <div ng-if="exampleForm.userPrimeNumber.$pending">
                Calculating....
@@ -68,7 +68,7 @@
         </div>
 
         <div class="form-group" ng-class="{'has-error': exampleForm.userMessage.$dirty && exampleForm.userMessage.$invalid}">
-          <label for="userMessage">User Message</label>
+          <label class="control-label" for="userMessage">User Message</label>
           <textarea class="form-control" type="text" id="userMessage" name="userMessage" ng-model="message" ng-minlength="100" ng-maxlength="1000" placeholder="User Message" required></textarea>
           <div class="help-block" ng-messages="exampleForm.userMessage.$error" ng-if="exampleForm.userMessage.$dirty">
             <div ng-message="required">This field is required</div>

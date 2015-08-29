@@ -56,6 +56,17 @@
           </div>
         </div>
 
+        <div class="form-group" ng-class="{'has-error': exampleForm.userPrimeNumber.$dirty && exampleForm.userPrimeNumber.$invalid}">
+          <label for="userPrimeNumber">Prime Number</label>
+          <input class="form-control" type="number" id="userPrimeNumber" name="userPrimeNumber" ng-model="primeNumber" placeholder="Prime Number" min="1" required prime />
+          <div ng-if="exampleForm.userPrimeNumber.$pending">
+               Calculating....
+          </div>
+          <div class="help-block" ng-messages="exampleForm.userPrimeNumber.$error" ng-if="exampleForm.userPrimeNumber.$dirty">
+            <div ng-message="prime">Prime numbers only!</div>            
+          </div>
+        </div>
+
         <div class="form-group" ng-class="{'has-error': exampleForm.userMessage.$dirty && exampleForm.userMessage.$invalid}">
           <label for="userMessage">User Message</label>
           <textarea class="form-control" type="text" id="userMessage" name="userMessage" ng-model="message" ng-minlength="100" ng-maxlength="1000" placeholder="User Message" required></textarea>

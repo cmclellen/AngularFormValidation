@@ -39,6 +39,14 @@
           </div>
         </div>
 
+        <div class="form-group" ng-class="{'has-error': exampleForm.dob.$touched && exampleForm.dob.$invalid}">
+          <label class="control-label" for="dob">Date of Birth</label>
+          <input class="form-control" type="date" id="dob" name="dob" ng-model="dob" placeholder="Date of Birth" required />
+          <div class="help-block" ng-messages="exampleForm.dob.$error" ng-if="exampleForm.dob.$touched">
+            <div ng-message="required">This field is required</div>            
+          </div>
+        </div>
+
         <div class="form-group" ng-class="{'has-error': exampleForm.userPhoneNumber.$dirty && exampleForm.userPhoneNumber.$invalid}">
           <label class="control-label" for="userPhoneNumber">Phone Number</label>
           <input class="form-control" type="email" id="userPhoneNumber" name="userPhoneNumber" ng-model="phoneNumber" placeholder="Phone Number" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" required />
@@ -76,6 +84,8 @@
             <div ng-message="maxlength">Message must not exceed 1000 characters</div>
           </div>
         </div>
+
+
       </form>
     </div>
   </body>
